@@ -5,10 +5,13 @@ import requests
 import csv
 from datetime import datetime
 import os
+import sys
 
 filepath = "stats.csv"
 result = []
 sumator = []
+
+filesites = sys.argv[-1]
 
 path = os.path.join(os.path.expanduser('/'), 'var', 'log', 'stats', 'logs.csv')
 path_statistics = os.path.join(os.path.expanduser('/'), 'var', 'log', 'stats', 'statistics.csv')
@@ -98,7 +101,7 @@ def read_csv_log(path_logs, filepath):
 
 
 if __name__ == '__main__':
-    with open("/bin/sites.txt", "r") as f:
+    with open(filesites, "r") as f:
         lines = [line.rstrip('\n').replace(',','') for line in f]
         print(lines)
 
