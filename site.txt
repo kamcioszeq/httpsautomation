@@ -1,0 +1,5 @@
+localhost,
+www.wp.pl,
+http://www.oneasat.pl,
+https://www.guuugle.com,
+www.guaminsects.myspecies.info
